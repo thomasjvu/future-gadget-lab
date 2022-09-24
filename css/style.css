@@ -1,0 +1,207 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Xanh+Mono:ital@0;1&display=swap');
+
+h1 {
+     font-size: 6rem;
+     font-weight: 700;
+}
+
+h2 {
+     font-size: 4rem;
+     font-weight: 700;
+     text-transform: uppercase;
+}
+
+h3 {
+     font-size: 3rem;
+     font-weight: 700;
+     text-transform: uppercase;
+}
+
+h4 {
+     font-size: 2rem;
+     font-weight: 700;
+     text-transform: uppercase;
+}
+
+p {
+     font-size: 1.6rem;
+     font-family: 'Xanh Mono', monospace;
+}
+
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+     background: #000;
+     color: #fff;
+     font-family: 'EB Garamond', sans-serif;
+     font-size: 62.5%;
+}
+
+body {
+     margin-bottom: 20px;
+}
+
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+
+}
+
+main {
+     display: flex;
+     justify-content: center;
+     height: 600px;
+}
+
+.grid {
+}
+
+.oneEighth{
+     width: 8.33%;
+     float: left;
+     cursor: pointer;
+}
+
+.oneEighth img:hover {
+     background: #fff;
+     border-left: 10px solid rgb(237, 205, 92)
+}
+
+.characterSelect {
+     text-align: center;
+}
+
+section.characterSelect {
+     display: flex;
+     justify-items: center;
+     align-items: center;
+     padding: 50px 0px;
+     background-color: #101010;
+     opacity: 0.8;
+     background-image:  repeating-linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%, #000000), repeating-linear-gradient(45deg, #000000 25%, #101010 25%, #101010 75%, #000000 75%, #000000);
+     background-position: 0 0, 10px 10px;
+     background-size: 20px 20px;
+}
+
+section.characterSelect section {
+     flex-basis: 100%;
+     justify-items: center;
+     align-self: center;
+     align-items: center;
+}
+
+section.characterSelect > section img {
+
+}
+
+.characterDescription {
+     width: 33%;
+     margin: 0 auto;
+}
+
+footer {
+
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+header > nav {
+     display: flex;
+     justify-content: center;
+}
+
+header > nav img.logo {
+     width: 100px;
+     margin-bottom: 10px;
+}
+
+main + section {
+     display: flex;
+     justify-content: center;
+}
+
+
+
+.separator {
+     border-bottom: 1px solid white;
+}
+
+.hidden {
+     display: none;
+}
+
+.credits {
+     text-align: center;
+}
+
+.disclaimer {
+     font-size: 1rem;
+     color: #edcd5c
+}
+
+
+/******************************************
+/* ANIMATIONS
+/*******************************************/
+
+.floating {
+     animation-name: floating;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+     animation-timing-function: ease-in-out;
+     margin-left: 0px;
+     margin-top: 15px;
+}
+
+.heart {
+     transform: rotate(45deg);
+     /* animation: <animation-name> <animation-duration> <animation-iteration-count> */
+     animation: animateHeart 1.2s infinite;
+   }
+ 
+@keyframes animateHeart {
+     0% {
+       transform: rotate(45deg) scale(0.8);
+     }
+     5% {
+       transform: rotate(45deg) scale(0.9);
+     }
+     10% {
+       transform: rotate(45deg) scale(0.8);
+     }
+     15% {
+       transform: rotate(45deg) scale(1);
+     }
+     50% {
+       transform: rotate(45deg) scale(0.8);
+     }
+     100% {
+       transform: rotate(45deg) scale(0.8);
+     }
+}
